@@ -46,21 +46,21 @@ of those sections to manage the look and feel of the site. */
 }*/
 
 .data-analysis-section {
-    height: 900%;
+    height: 500%;
     padding-top: 60px;
     text-align: center;
     background: #fff;
 }
 
 .model-section {
-    height: 500%;
+    height: 100%;
     padding-top: 60px;
     text-align: center;
     background: #eee;
 }
 
-.app-section {
-    height: 150%;
+.about-section {
+    height: 50%;
     padding-top: 60px;
     text-align: center;
     background: #eee;
