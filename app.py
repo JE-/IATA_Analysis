@@ -2,6 +2,13 @@ from flask import Flask,render_template,request,redirect
 import os
 import datetime
 
+from flask import Flask, render_template, request
+from wtforms import Form, TextAreaField, validators
+import pickle
+import sqlite3
+import os
+import numpy as np
+
 
 ####-- Flask
 
