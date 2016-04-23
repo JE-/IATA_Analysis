@@ -22,7 +22,7 @@ app = Flask(__name__)
 def root():
     if request.method == 'GET':
         form = ReviewForm(request.form)
-        return render_template('index.html', form=form))
+        return render_template('index.html', form=form)
     else:
         return render_template('userinfo.html')
 
