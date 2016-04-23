@@ -9,7 +9,7 @@ import sqlite3
 import os
 import numpy as np
 
-from vectorizer import vect
+#from vectorizer import vect
 ####-- Flask
 
 class ReviewForm(Form):
