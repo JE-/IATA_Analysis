@@ -1,14 +1,10 @@
 from flask import Flask,render_template,request,redirect
+from wtforms import Form, TextAreaField, validators
 import os
 import datetime
-
-from flask import Flask, render_template, request
-from wtforms import Form, TextAreaField, validators
-
 import sklearn
 import pickle
 import sqlite3
-import os
 import numpy as np
 
 from vectorizer import vect
@@ -41,7 +37,6 @@ def sqlite_entry(path, document, y):
     conn.close()
 
 #### Flask
-
 class ReviewForm(Form):
     moviereview = TextAreaField('',
                                 [validators.DataRequired(),
