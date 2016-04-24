@@ -14,7 +14,7 @@ import numpy as np
 ######## Preparing the Classifier
 cur_dir = os.path.dirname(__file__)
 clf = pickle.load(open(os.path.join(cur_dir,
-                 'pkl_objects',
+                 'pickled_objects',
                  'classifier.pkl'), 'rb'))
 #db = os.path.join(cur_dir, 'reviews.sqlite')
 #
