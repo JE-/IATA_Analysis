@@ -11,7 +11,7 @@ import numpy as np
 
 #from vectorizer import vect
 
-######## Preparing the Classifier
+######### Preparing the Classifier
 cur_dir = os.path.dirname(__file__)
 clf = pickle.load(open(os.path.join(cur_dir,
                  'pickled_objects',
