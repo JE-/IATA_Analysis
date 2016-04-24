@@ -174,7 +174,7 @@
             {% from "_formhelpers.html" import render_field %}
             <form method=post action="/results">
               <dl>
-            	{{ render_field(form.moviereview, cols='40', rows='14') }}
+            	{{ render_field(form.moviereview, cols='100', rows='10') }}
               </dl>
               <div>
             	  <input type=submit value='Submit review' name='submit_btn'>
