@@ -9,7 +9,7 @@ import numpy as np
 
 from vectorizer import vect
 
-### Preparing the Classifier
+##### Preparing the Classifier
 cur_dir = os.path.dirname(__file__)
 clf = pickle.load(open(os.path.join(cur_dir,
                   'pickled_objects',
@@ -50,6 +50,18 @@ def root():
         return render_template('index.html', form=form)
     else:
         return render_template('userinfo.html')
+
+@app.route('/results', methods=['POST'])
+def results():
+    form = ReviewForm(request.form)
+    if request.method == 'POST' and form.validate():
+        review = request.form['moviereview']
+        y, proba = classify(review)
+        return render_template('results.html',
+                                content=review,
+                                prediction=y,
+                                probability=round(proba*100, 2))
+    return render_template('index.html', form=form)
 
 if __name__ == "__main__":
     app.debug = True
