@@ -13,10 +13,10 @@ import numpy as np
 
 ######## Preparing the Classifier
 cur_dir = os.path.dirname(__file__)
-# clf = pickle.load(open(os.path.join(cur_dir,
-#                  'pkl_objects',
-#                  'classifier.pkl'), 'rb'))
-# db = os.path.join(cur_dir, 'reviews.sqlite')
+clf = pickle.load(open(os.path.join(cur_dir,
+                 'pkl_objects',
+                 'classifier.pkl'), 'rb'))
+#db = os.path.join(cur_dir, 'reviews.sqlite')
 #
 # def classify(document):
 #     label = {0: 'negative', 1: 'positive'}
