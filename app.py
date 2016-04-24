@@ -27,18 +27,18 @@ def classify(document):
     y = clf.predict(X)[0]
     proba = np.max(clf.predict_proba(X))
     return label[y], proba
-#
-# def train(document, y):
-#     X = vect.transform([document])
-#     clf.partial_fit(X, [y])
-#
-# def sqlite_entry(path, document, y):
-#     conn = sqlite3.connect(path)
-#     c = conn.cursor()
-#     c.execute("INSERT INTO review_db (review, sentiment, date)"\
-#     " VALUES (?, ?, DATETIME('now'))", (document, y))
-#     conn.commit()
-#     conn.close()
+
+def train(document, y):
+    X = vect.transform([document])
+    clf.partial_fit(X, [y])
+
+def sqlite_entry(path, document, y):
+    conn = sqlite3.connect(path)
+    c = conn.cursor()
+    c.execute("INSERT INTO review_db (review, sentiment, date)"\
+    " VALUES (?, ?, DATETIME('now'))", (document, y))
+    conn.commit()
+    conn.close()
 
 #### Flask
 
