@@ -11,7 +11,7 @@ import sqlite3
 import os
 import numpy as np
 
-#from vectorizer import vect
+from vectorizer import vect
 
 ### Preparing the Classifier
 cur_dir = os.path.dirname(__file__)
