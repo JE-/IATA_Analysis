@@ -4,7 +4,6 @@ import datetime
 
 from flask import Flask, render_template, request
 from wtforms import Form, TextAreaField, validators
-import sklearn
 import pickle
 import sqlite3
 import os
