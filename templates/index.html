@@ -114,7 +114,7 @@
   <h3>Which airlines flew the most flights over the past 10 years? </h3><br>
   <img class="center-block" src="{{ url_for('static', filename='flights_plot_1.png') }}" class="img-responsive" alt="Cinque Terre" style="width:950px;height:500px">
   <h4>From the pattern above we can see that Southwest Airlines consistently fly the most flights
-    over the years. That is somewhat <a href = "https://en.wikipedia.org/wiki/World%27s_largest_airlines">surprising</a>. <br>Does that mean they are the largest airline in the US? <br><br>
+    over the years. According to wikipedia, this is a somewhat <a href = "https://en.wikipedia.org/wiki/World%27s_largest_airlines">surprising</a> finding. <br>Does that mean they are the largest airline in the US? <br><br>
     Lets see what the flight patterns look like if we limit our analysis only to major airports.<br><br>
     We'll define major airports as the 20 busiest airports in the country (in 2015).
   </h4>
@@ -147,8 +147,8 @@
         <h1>Flights leaving NYC</h1><br>
         <br>
         <h4>Lastly, lets try to understand how weather affects flight delays in the NYC region.<br>
-          <br>I downloaded daily weather for the NYC region from 2006 to 2015 from the <a href = "https://www.wunderground.com/weather/api/">Weather Undergrand API</a><br>
-          <br>The weather data was then joined to a SQL query of all flights originating from
+          <br>We can download daily weather for the NYC region from 2006 to 2015 from the <a href = "https://www.wunderground.com/weather/api/">Weather Undergrand API</a><br>
+          <br>This data can then be joined to a all flights originating from
           one of the 3 major<br> airports in the NYC region, i.e. JFK, La Guardia, and Newark (see ipython notebook for details).<br><br>
           A random forest model was able to explain 92% of the variance in weather-delays,<br>
           and the most important features that contributed to the model perforance were the departure time, snow and visibility.</h4>
