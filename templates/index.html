@@ -174,7 +174,7 @@
             {% from "_formhelpers.html" import render_field %}
             <form method=post action="/results">
               <dl>
-            	{{ render_field(form.moviereview, cols='100', rows='10') }}
+            	  {{ render_field(form.moviereview, cols='100', rows='10') }}
               </dl>
               <div>
             	  <input type=submit value='Submit review' name='submit_btn'>
@@ -187,60 +187,19 @@
       </div>
     </section>
 
-        <div class="modal-body">
-                <form class="form-horizontal">
-                    <div class="form-group">
-                        <label for="number_of_guests" class="col-sm-2 control-label">Number of Guests</label>
-                        <div class="col-sm-7">
-                            <div class="radio">
-                                <label class="radio-inline"><input type="radio" name="numberofguests" value="1">1</label>
-                                <label class="radio-inline"><input type="radio" name="numberofguests" value="2">2</label>
-                                <label class="radio-inline"><input type="radio" name="numberofguests" value="3">3</label>
-                                <label class="radio-inline"><input type="radio" name="numberofguests" value="4">4</label>
-                                <label class="radio-inline"><input type="radio" name="numberofguests" value="5">5</label>
-                                <label class="radio-inline"><input type="radio" name="numberofguests" value="6">6</label>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="section" class="col-sm-2 control-label">Section</label>
-                        <div class="col-sm-7">
-                            <div class="btn-group" data-toggle="buttons">
-                                <label class="btn btn-success active">
-                                    <input type="radio" name="section" id="section-non-smoking" autocomplete="off" checked> Non-Smoking
-                                </label>
-                                <label class="btn btn-danger">
-                                    <input type="radio" name="section" id="section-smoking" autocomplete="off"> Smoking
-                                </label>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="form-group has-feedback">
-                        <label for="date_and_time" class="col-sm-2 control-label">Date and Time</label>
-                        <div class="col-sm-4">
-                            <input type="text" class="form-control" id="inputDate" placeholder="Date">
-                            <span class="glyphicon glyphicon-calendar form-control-feedback" aria-hidden="true"></span>
-                        </div>
-                        <div class="col-sm-4">
-                            <input type="text" class="form-control" id="inputTime" placeholder="Time">
-                            <span class="glyphicon glyphicon-time form-control-feedback" aria-hidden="true"></span>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <div class="col-sm-offset-2 col-sm-10">
-                            <button type="submit" class="btn btn-primary">Reserve</button>
-                            <button type="button" class="btn btn-default btn-sm"
-                               data-dismiss="modal">Cancel</button>
-                        </div>
-                    </div>
-                    <div class="alert alert-warning alert-dismissible" role="alert">
-                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                        <strong>Warning:</strong>:Please <a href="tel:+85212345678" class="alert-link">call</a> us to reserve for more than six guests.
-                    </div>
-                </form>
-            </div>
+    <div class="dropdown">
+      <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+        Dropdown
+        <span class="caret"></span>
+      </button>
+      <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+        <li><a href="#">Action</a></li>
+        <li><a href="#">Another action</a></li>
+        <li><a href="#">Something else here</a></li>
+        <li role="separator" class="divider"></li>
+        <li><a href="#">Separated link</a></li>
+      </ul>
+    </div>
 
     {% block js_footer %}
     <!-- jQuery -->
